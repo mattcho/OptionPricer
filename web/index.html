@@ -9,8 +9,65 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <form>
+        <h1>Option Pricer</h1>
+        <p>Please fill in the blanks.</p>
+        <table>
+            <tr>
+              <th>Item</th>
+              <th>Input</th>
+            </tr>
+            <tr>
+              <td>Option Type</td>
+              <td>
+                  <select name="optionType">
+                    <option value="european">European</option>
+                    <option value="ameircan">American</option>
+                    <option value="asian">Asian</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Call/Put</td>
+              <td>
+                  <select name="callput">
+                    <option value="call">Call</option>
+                    <option value="put">Put</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Algorithm Category</td>
+              <td>
+                  <select name="algorithm">
+                    <option value="bs">B-S Formula</option>
+                    <option value="binomial">Binomial Tree</option>
+                    <option value="numerical">Numerical Integration</option>
+                    <option value="simulation">Simulation</option>
+                  </select>
+              </td>
+            </tr>
+          </table>
+        <input type="submit">
+        </form>
     </body>
 </html>
